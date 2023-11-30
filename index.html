@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VETERINARIA</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
+    <link rel="icon" href="./imagenes/logo.png" type="image/png">
+</head>
+
+<body>
+    <div class="citas">
+        <input type="radio" name="radiobt" id="citasAnuladas" required>
+        <label for="citasAnuladas">Citas Anuladas</label>
+        <div class="citasAsignadasContainer">
+            <input type="radio" name="radiobt" id="citasAsignadas" required>
+            <label for="citasAsignadas" onclick="mostrarCitasAsignadas()">Citas Asignadas</label>
+            <div id="citasAsignadasContent" class="citasAsignadasContent">
+            </div>
+        </div>
+        
+        <input type="radio" name="radiobt" id="citasTerminadas" required>
+        <label for="citasTerminadas">Citas Terminadas</label>
+
+        <button id="mostrarFormulario" onclick="mostrarFormulario()">Agendar Cita</button>
+    </div>
+
+    <div class="content_mayor" id="formulario" style="display:none;">
+        <div>
+            <h2 class="alert" id="alertaadso"></h2>
+        </div>
+        <div class="titulo">
+            <h1>Registro de Mascotas</h1>
+        </div>
+        <div class="Name_Mas">
+            <label for="nombreMascota">Nombre de la Mascota:</label>
+            <input placeholder="Nombre De La Mascota" id="nombreMascota" name="nombreMascota" required>
+        </div>
+
+        <div class="Name_Mas">
+            <label for="propietario">Propietario:</label>
+            <input placeholder="Nombre Del propietario" id="propietario" name="propietario" required>
+        </div>
+        <div class="Name_Mas">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        <div class="Name_Mas">
+            <label for="tipoMascota">Tipo de Mascota:</label>
+            <div class="styled-select">
+                <select name="tipoMascota" id="tipoMascota" required onchange="cambiarImagen()">
+                    <option value="" disabled selected>Seleccione Una Opcion</option>
+                    <option value="PECES">PECES</option>
+                    <option value="ANFIBIOS">ANFIBIOS</option>
+                    <option value="REPTILES">REPTILES</option>
+                    <option value="AVES">AVES</option>
+                    <option value="MAMIFEROS">MAMÍFEROS</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="imagenMascota">
+            <img id="imagenMascota" src="" alt="Imagen de la mascota">
+        </div>
+
+        <div class="Name_Mas">
+            <label for="fecha">Fecha de Registro:</label>
+            <input type="date" id="fecha" name="fecha" required>
+        </div>
+
+        <div class="Name_Mas">
+            <label for="hora">Hora de Registro:</label>
+            <input type="time" id="hora" name="hora" required>
+        </div>
+
+        <div class="Name_Mas">
+            <label for="sintomas">Síntomas:</label>
+            <textarea id="sintomas" name="sintomas" rows="4" cols="50"></textarea>
+            <br>
+
+            <div class="button">
+                <input type="button" value="Enviar" onclick="guardarDatos()">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
