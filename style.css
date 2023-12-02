@@ -106,6 +106,7 @@ input[type="button"] {
 
 
 .citas label {
+    height: 45px;
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -135,6 +136,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    height: 55px;
+    margin-top: 5px;
 }
 
 button:hover {
@@ -170,19 +173,27 @@ button:hover {
     pointer-events: none;
 }
 
-.alert {
+.cont_alerta {
+    width: 10%;
+    position: fixed;
+    right: 5%;
+    top: 50vh;
     background-color: rgb(255, 0, 0);
-    width: 100%;
     height: auto;
     color: #ffffff;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    padding: 20px;
+    display: none;
+}
+.alerta2{
+    display: flex;
 }
 
 .citasAsignadasContent {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -209,13 +220,4 @@ button:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.imagenMascota {
-    margin-top: 10px;
-    display: none; /* Inicialmente oculta la imagen */
-}
 
-.imagenMascota img {
-    max-width: 100%; /* Ajusta el tamaño de la imagen según sea necesario */
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}

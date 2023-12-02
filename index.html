@@ -11,26 +11,10 @@
 </head>
 
 <body>
-    <div class="citas">
-        <input type="radio" name="radiobt" id="citasAnuladas" required>
-        <label for="citasAnuladas">Citas Anuladas</label>
-        <div class="citasAsignadasContainer">
-            <input type="radio" name="radiobt" id="citasAsignadas" required>
-            <label for="citasAsignadas" onclick="mostrarCitasAsignadas()">Citas Asignadas</label>
-            <div id="citasAsignadasContent" class="citasAsignadasContent">
-            </div>
-        </div>
-        
-        <input type="radio" name="radiobt" id="citasTerminadas" required>
-        <label for="citasTerminadas">Citas Terminadas</label>
-
-        <button id="mostrarFormulario" onclick="mostrarFormulario()">Agendar Cita</button>
+    <div class="cont_alerta">
+        <p class="alert" id="alertaadso"></p>
     </div>
-
     <div class="content_mayor" id="formulario" style="display:none;">
-        <div>
-            <h2 class="alert" id="alertaadso"></h2>
-        </div>
         <div class="titulo">
             <h1>Registro de Mascotas</h1>
         </div>
@@ -60,9 +44,8 @@
                 </select>
             </div>
         </div>
-        
         <div class="imagenMascota">
-            <img id="imagenMascota" src="" alt="Imagen de la mascota">
+            <img id="imagenMascota" src="./imagenes/interrogacion.png" alt="Imagen de la mascota">
         </div>
 
         <div class="Name_Mas">
@@ -85,6 +68,22 @@
             </div>
 
         </div>
+    </div>
+    <div class="citas">
+        <input type="radio" name="radiobt" id="citasAnuladas" required>
+        <label for="citasAnuladas">Citas Anuladas</label>
+        
+        <div class="citasAsignadasContainer">
+            <input type="radio" name="radiobt" id="citasAsignadas" required>
+            <label for="citasAsignadas">Citas Asignadas</label>
+            <div id="citasAsignadasContent" class="citasAsignadasContent">
+            </div>
+        </div>
+        
+        <input type="radio" name="radiobt" id="citasTerminadas" required>
+        <label for="citasTerminadas">Citas Terminadas</label>
+
+        <button id="mostrarFormulario" onclick="mostrarFormulario()">Agendar Cita</button>
     </div>
 
 </body>
